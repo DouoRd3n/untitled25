@@ -11,20 +11,9 @@ public class Thread2 extends Thread{
     @Override
     public void run() {
         while (true){
-            if (userStorage.limit == userStorage.getSize()) {
-                while (!thread.isAlive()){
-                    try {
-                        Thread2.sleep(2000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-
-                }
-                thread.start();
-            } else {
 
             try {
-                thread.join(4000);
+                thread.join(2000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -33,4 +22,4 @@ public class Thread2 extends Thread{
         }
     }
     }
-}
+
